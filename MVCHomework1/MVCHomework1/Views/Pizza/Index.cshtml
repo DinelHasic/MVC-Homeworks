@@ -1,0 +1,18 @@
+﻿@using MVCHomework1.Models.Domain
+@model List<MVCHomework1.Models.Domain.Order>
+@*
+
+	For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	<h1>List of Orders</h1>
+
+	<ul>
+		@foreach (Order order in @Model)
+		{
+			<li>
+				<h5>Order Id:@order.Id   Price:@order.Price$  IsDelivered:@order.IsDelivered  User Id:@order.UserId   Pizza Id:@order.PizzaId </h5>
+			</li>
+		}
+	</ul>
+}
